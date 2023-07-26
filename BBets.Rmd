@@ -66,7 +66,7 @@ varstor=numeric()
 ```{r}
 b_low <- array(100)
 for (i in 1:100) {
-  b_low[i] <- BrLw(odds=4.39)
+  b_low[i] <- BrLw(odds=4.32)
 }
 ```
 
@@ -98,21 +98,27 @@ for (i in 1:48) {
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
+```{r}
+fair_low <- array(40)
+for (i in 1:40) {
+  fair_low[i] <- BrLw(numClass =28)
+}
+```
 
 
 ```{r}
-sorted_brownlow <- sort(brownlow)
-plot(sorted_brownlow, type = "l", xlab = "Index", ylab = "Value",
+sorted_fair_low <- sort(fair_low)
+plot(sorted_fair_low, type = "l", xlab = "Index", ylab = "Value",
      main = "Line Plot of Brownlow Numerical Vector")
 ```
 
-
-
 ```{r}
-favstats(sorted_brownlow)
+favstats(sorted_fair_low)
 ```
 
- From the stats above it shows The average earning which is 279. Then the 95 percent confidence interval is 2 standard deviation above the mean and two standard deviations below the mean. The numbers are between 225 and 333. 
+From the stats above the number class value that worked  was 28 which was the number that was the furthest or closets to 0. 
+
+
 
 # Discussion and Conclusion
 
