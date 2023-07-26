@@ -69,8 +69,8 @@ varstor=numeric()
 
 
 ```{r}
-brownlow <- array(100)
-for (i in 1:100) {
+brownlow <- array(40)
+for (i in 1:48) {
   brownlow[i] <- BrLw()
 }
 ```
@@ -90,6 +90,11 @@ plot(sorted_brownlow, type = "l", xlab = "Index", ylab = "Value",
 
 
 
+```{r}
+favstats(sorted_brownlow)
+```
+
+ From the stats above it shows The average earning which is 279. Then the 95 percent confidence interval is 2 standard deviation above the mean and two standard deviations below the mean. The numbers are between 225 and 333. 
 
 # Discussion and Conclusion
 
